@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from core.models import Carrera
 
 
 def home(request):
@@ -9,7 +10,11 @@ def home(request):
 
 def carrera(request):
     #return HttpResponse("<h1>Carrera<h1/>")
-    return render(request,'core/carreras.html')
+    carreras = Carrera.objects.all()  #Selecciona todo lo de la tabla carrera
+    data = {
+        'carreras': carreras
+    }
+    return render(request,'core/carreras.html', data)
 
 
 def profe(request):

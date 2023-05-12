@@ -10,7 +10,7 @@ class docente(models.Model):
     def __str__(self):
         return self.nombre + " " + self.apellido
 
-class carrera(models.Model):
+class Carrera(models.Model):
     codigo= models.CharField(max_length=10)
     nombre_carrera= models.CharField(max_length=50)
     duracion_semestres= models.IntegerField()
