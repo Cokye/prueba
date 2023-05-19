@@ -10,5 +10,8 @@
 </head>
 <body>
     <h1>PROFESORES TIO</h>
+    {% for docente in docentes %}
+    <li>{{docente.nombre}} </li>
+    {% endfor %}
 </body>
 </html>
